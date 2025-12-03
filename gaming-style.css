@@ -1,0 +1,181 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #0f0f23 0%, #1a1a2e 50%, #16213e 100%);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    max-width: 420px;
+    padding: 2rem;
+}
+
+.gaming-bg {
+    position: absolute;
+    font-size: 3.5rem;
+    opacity: 0.2;
+    animation: gameFloat 3s ease-in-out infinite;
+    color: #00d4ff;
+}
+
+.gaming-bg:nth-child(1) {
+    top: 8%;
+    left: 5%;
+    animation-delay: 0s;
+}
+
+.gaming-bg:nth-child(2) {
+    top: 15%;
+    right: 8%;
+    animation-delay: 1s;
+}
+
+.gaming-bg:nth-child(3) {
+    bottom: 25%;
+    left: 3%;
+    animation-delay: 2s;
+}
+
+.gaming-bg:nth-child(4) {
+    bottom: 18%;
+    right: 5%;
+    animation-delay: 1.5s;
+}
+
+.gaming-bg:nth-child(5) {
+    top: 50%;
+    left: 50%;
+    animation-delay: 3s;
+}
+
+@keyframes gameFloat {
+    0%, 100% { transform: translateY(0px) rotate(0deg); }
+    50% { transform: translateY(-20px) rotate(10deg); }
+}
+
+.login-box {
+    background: rgba(0, 212, 255, 0.1);
+    padding: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 20px 40px rgba(0, 212, 255, 0.3);
+    text-align: center;
+    backdrop-filter: blur(15px);
+    border: 3px solid rgba(0, 212, 255, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.login-box::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    right: -2px;
+    bottom: -2px;
+    background: linear-gradient(45deg, #00d4ff, #ff0080, #8000ff, #00ff80);
+    border-radius: 25px;
+    z-index: -1;
+    animation: neonGlow 2s linear infinite;
+}
+
+@keyframes neonGlow {
+    0% { filter: hue-rotate(0deg); }
+    100% { filter: hue-rotate(360deg); }
+}
+
+.login-box h2 {
+    color: #00d4ff;
+    margin-bottom: 0.5rem;
+    font-size: 2.2rem;
+    text-shadow: 0 0 10px #00d4ff;
+}
+
+.login-box p {
+    color: #ffffff;
+    margin-bottom: 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.input-group {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1.2rem 3.5rem 1.2rem 1.2rem;
+    border: 2px solid #00d4ff;
+    border-radius: 15px;
+    font-size: 1.1rem;
+    background: rgba(0, 0, 0, 0.3);
+    color: white;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #cccccc;
+}
+
+.input-group input:focus {
+    border-color: #ff0080;
+    box-shadow: 0 0 20px rgba(255, 0, 128, 0.5);
+    transform: translateY(-3px);
+}
+
+.input-group .icon {
+    position: absolute;
+    right: 1.2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 1.5rem;
+}
+
+.login-btn {
+    width: 100%;
+    padding: 1.2rem;
+    background: linear-gradient(135deg, #00d4ff, #ff0080);
+    border: none;
+    border-radius: 15px;
+    color: white;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-bottom: 1.5rem;
+    text-shadow: 0 0 5px rgba(0,0,0,0.5);
+}
+
+.login-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(0, 212, 255, 0.4);
+    background: linear-gradient(135deg, #ff0080, #00d4ff);
+}
+
+.signup-link p {
+    color: #ffffff;
+    font-size: 1rem;
+}
+
+.signup-link a {
+    color: #00d4ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.signup-link a:hover {
+    color: #ff0080;
+    text-decoration: underline;
+}
